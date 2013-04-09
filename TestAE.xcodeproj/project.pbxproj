@@ -49,6 +49,8 @@
 		5650C144170E530800AF8260 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5650C13A170E530800AF8260 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
 		5650C147170F5D1C00AF8260 /* voice3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5650C146170F5D1C00AF8260 /* voice3.wav */; };
 		5657E183171349810009154F /* voice4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5657E182171349810009154F /* voice4.wav */; };
+		56FE5C6A1713A94500D09B30 /* voice5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 56FE5C691713A94500D09B30 /* voice5.wav */; };
+		56FE5C6C1713AA9800D09B30 /* voice6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 56FE5C6B1713AA9800D09B30 /* voice6.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +125,8 @@
 		5650C13B170E530800AF8260 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
 		5650C146170F5D1C00AF8260 /* voice3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice3.wav; sourceTree = "<group>"; };
 		5657E182171349810009154F /* voice4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice4.wav; sourceTree = "<group>"; };
+		56FE5C691713A94500D09B30 /* voice5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice5.wav; sourceTree = "<group>"; };
+		56FE5C6B1713AA9800D09B30 /* voice6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice6.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,9 +196,11 @@
 				5650C121170E090400AF8260 /* voice1.wav */,
 				5650C146170F5D1C00AF8260 /* voice3.wav */,
 				5650C0CA170E074300AF8260 /* TestAE-Info.plist */,
+				56FE5C6B1713AA9800D09B30 /* voice6.wav */,
 				5650C127170E50BA00AF8260 /* voice2-spx.wav */,
 				5650C0CB170E074300AF8260 /* InfoPlist.strings */,
 				5650C125170E110D00AF8260 /* arrangement1.wav */,
+				56FE5C691713A94500D09B30 /* voice5.wav */,
 				5650C0CE170E074300AF8260 /* main.m */,
 				5657E182171349810009154F /* voice4.wav */,
 				5650C0D0170E074300AF8260 /* TestAE-Prefix.pch */,
@@ -347,6 +353,8 @@
 				5650C142170E530800AF8260 /* README.markdown in Resources */,
 				5650C147170F5D1C00AF8260 /* voice3.wav in Resources */,
 				5657E183171349810009154F /* voice4.wav in Resources */,
+				56FE5C6A1713A94500D09B30 /* voice5.wav in Resources */,
+				56FE5C6C1713AA9800D09B30 /* voice6.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

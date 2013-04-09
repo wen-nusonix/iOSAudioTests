@@ -59,11 +59,7 @@
 {
   
     // Create the voice player 
-    
-    // NSURL *vmedia = [[NSBundle mainBundle] URLForResource:@"voice2-spx" withExtension:@"wav"];
-    // NSURL *vmedia = [[NSBundle mainBundle] URLForResource:@"voice1" withExtension:@"wav"];
-//    NSURL *vmedia = [[NSBundle mainBundle] URLForResource:@"voice3" withExtension:@"wav"];
-    
+     
     NSURL *vmedia = [NSURL fileURLWithPath:inputFile];
 
     
@@ -222,9 +218,11 @@
     // NSURL *inURL = [[NSBundle mainBundle] URLForResource:@"voice2-spx" withExtension:@"wav"];
     // NSURL *inURL = [[NSBundle mainBundle] URLForResource:@"voice1" withExtension:@"wav"];
     // NSURL *inURL = [[NSBundle mainBundle] URLForResource:@"voice4" withExtension:@"wav"];
+    // NSURL *inURL = [[NSBundle mainBundle] URLForResource:@"voice5" withExtension:@"wav"];
+    // NSURL *inURL = [[NSBundle mainBundle] URLForResource:@"voice6" withExtension:@"wav"];
 
-    //NSURL *inURL = [NSURL fileURLWithPath:[self getFile:@"recorded.wav"]];
-    NSURL *inURL = [NSURL fileURLWithPath:[self getFile:@"recorded.caf"]];
+    NSURL *inURL = [NSURL fileURLWithPath:[self getFile:@"recorded.wav"]];
+    // NSURL *inURL = [NSURL fileURLWithPath:[self getFile:@"recorded.caf"]];
 
     NSURL *outURL = [NSURL fileURLWithPath:tmpFile];
 
@@ -310,7 +308,7 @@
         
         SInt16 *frames = (SInt16*) buffer;
         UInt64 bufferSum = 0;
-        for (int i = 0 ; i < frameCount; ++i) {
+        for (int i = 0 ; i < frameCount * inputFileFormat.mChannelsPerFrame; ++i) {
             SInt32 frame = frames[i];
             SInt32 amp = frame > 0 ? frame : -1 * frame;
             bufferSum += amp;
@@ -398,7 +396,7 @@
                 SInt16 *frames = (SInt16*) buffer;
                 
                 // TBD -- use the Accelerator framework for this
-                for (int i = 0; i < frameCount; ++ i) {
+                for (int i = 0; i < frameCount * inputFileFormat.mChannelsPerFrame; ++ i) {
                     SInt16 frame = ((float)frames[i]) * ampMultiplier;
                     frames[i] = frame;
                 }
@@ -431,7 +429,7 @@
         NSLog(@"Failed to begin recording");
     }
     [audioController addInputReceiver:recorder];
-    
+ 
     // aac recorder
     
     outputFile = [self getFile:@"recorded.caf"];
@@ -451,7 +449,7 @@
     
     [recorder finishRecording];
     [audioController removeInputReceiver:recorder];
-    
+ 
     [aacRecorder finishRecording];
     [audioController removeInputReceiver:aacRecorder];
 
